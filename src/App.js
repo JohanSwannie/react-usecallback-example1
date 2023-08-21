@@ -8,11 +8,11 @@ function App() {
   const getNumbers = useCallback(
     (passedNumber) => {
       return [
-        number + passedNumber,
-        (number + 1 + passedNumber) / 2,
-        (number + 2 + passedNumber) / 3,
-        (number + 3 + passedNumber) / 4,
-        (number + 4 + passedNumber) / 5,
+        Math.round(number + passedNumber),
+        Math.round((number + 1 + passedNumber) / 2),
+        Math.round((number + 2 + passedNumber) / 3),
+        Math.round((number + 3 + passedNumber) / 4),
+        Math.round((number + 4 + passedNumber) / 5),
       ];
     },
     [number]
