@@ -7,7 +7,13 @@ const ListNumbers = ({ getNumbers }) => {
     setNumbers(getNumbers(15));
   }, [numbers]);
 
-  return numbers.map((number) => <div key={number}>{number}</div>);
+  return (
+    <ul>
+      {numbers.map((number) => (
+        <li key={number}>{number}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default ListNumbers;
