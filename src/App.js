@@ -19,6 +19,7 @@ function App() {
   );
 
   const handleChangedNumber = (event) => {
+    event.preventDefault();
     if (event.target.value > 0) {
       setNumber(parseInt(event.target.value));
     } else {
